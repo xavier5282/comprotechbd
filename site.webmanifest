@@ -1,0 +1,25 @@
+{
+  "name": "ComproTechBD",
+  "short_name": "ComproTechBD",
+  "description": "ComproTechBD e-learning platform for skills, digital training, and technology growth.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07131d",
+  "theme_color": "#07131d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/images/fav-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/fav-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
