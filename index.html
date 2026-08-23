@@ -109,7 +109,23 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#learning-hub">Learning Hub</a>
-            <a href="#process">Process</a>
+            <div class="topbar__nav-dropdown">
+              <button class="topbar__nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
+                Services <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="topbar__nav-dropdown-menu" id="services-menu">
+                <a href="#software-development"><i class="fa-solid fa-code" aria-hidden="true"></i>Software Development</a>
+                <a href="#it-audit-compliance"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>IT Audit &amp; Compliance</a>
+                <a href="#it-support-amc"><i class="fa-solid fa-headset" aria-hidden="true"></i>IT Support &amp; AMC</a>
+                <a href="#it-consult-training"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>IT Consult &amp; Training</a>
+                <a href="#digital-transformation"><i class="fa-solid fa-bolt" aria-hidden="true"></i>Digital Transformation</a>
+                <a href="#ai-automation"><i class="fa-solid fa-robot" aria-hidden="true"></i>AI Automation Service</a>
+                <a href="#erp-solution"><i class="fa-solid fa-gears" aria-hidden="true"></i>ERP Software Solution</a>
+                <a href="#branding-content"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i>Branding &amp; Content</a>
+                <a href="#excel-automation"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>MIS-Excel Automation</a>
+                <a href="#server-network"><i class="fa-solid fa-network-wired" aria-hidden="true"></i>Server &amp; Network</a>
+              </div>
+            </div>
             <a href="#contact" class="topbar__nav-link topbar__nav-link--featured">
               Contact
               <span class="topbar__nav-badge">NEW</span>
@@ -130,7 +146,7 @@
               </div>
               <div class="hero__actions">
                 <a href="#contact" class="button button--primary">Book a Consultation</a>
-                <a href="#process" class="button button--secondary">How We Work</a>
+                <a href="#services" class="button button--secondary">Explore Services</a>
               </div>
               <ul class="hero-stats" aria-label="Company highlights">
                 <li>
@@ -279,25 +295,21 @@
             </div>
           </section>
 
-          <section class="section" id="process" aria-labelledby="process-heading">
-            <p class="section-title">Our process</p>
-            <h2 class="section-heading" id="process-heading">A practical workflow that keeps delivery clear, fast, and measurable.</h2>
-            <div class="process-grid section-offset">
-              <article class="process-step">
-                <div class="process-step__label">01 / Discover</div>
-                <h3 class="process-step__title">Audit the market, opportunity, and user need.</h3>
-                <p>We map goals, constraints, audience behavior, and where the biggest product or business gain sits.</p>
-              </article>
-              <article class="process-step">
-                <div class="process-step__label">02 / Design</div>
-                <h3 class="process-step__title">Prototype the right experience before building it.</h3>
-                <p>We build the structure, interaction flows, and visual direction around the outcomes your business needs most.</p>
-              </article>
-              <article class="process-step">
-                <div class="process-step__label">03 / Deliver</div>
-                <h3 class="process-step__title">Launch with systems that are built to scale.</h3>
-                <p>Our team ships polished digital products, creative assets, and supporting systems designed for real-world performance.</p>
-              </article>
+          <section class="section services" id="services" aria-labelledby="services-heading">
+            <p class="section-title">Our services</p>
+            <h2 class="section-heading" id="services-heading">Technology services that keep your business moving.</h2>
+            <div class="services-grid section-offset">
+              <a class="service-card" id="software-development" href="#contact"><i class="fa-solid fa-code" aria-hidden="true"></i><span>Software Development</span></a>
+              <a class="service-card" id="website-design-seo" href="#contact"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>Website Design &amp; SEO</span></a>
+              <a class="service-card" id="it-audit-compliance" href="#contact"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>IT Audit &amp; Compliance</span></a>
+              <a class="service-card" id="it-support-amc" href="#contact"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>IT Support &amp; AMC</span></a>
+              <a class="service-card" id="it-consult-training" href="#contact"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i><span>IT Consult &amp; Training</span></a>
+              <a class="service-card" id="digital-transformation" href="#contact"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>Digital Transformation</span></a>
+              <a class="service-card" id="ai-automation" href="#contact"><i class="fa-solid fa-robot" aria-hidden="true"></i><span>AI Automation Service</span></a>
+              <a class="service-card" id="erp-solution" href="#contact"><i class="fa-solid fa-gears" aria-hidden="true"></i><span>ERP Software Solution</span></a>
+              <a class="service-card" id="branding-content" href="#contact"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i><span>Branding &amp; Content</span></a>
+              <a class="service-card" id="excel-automation" href="#contact"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>MIS-Excel Automation</span></a>
+              <a class="service-card" id="server-network" href="#contact"><i class="fa-solid fa-network-wired" aria-hidden="true"></i><span>Server &amp; Network</span></a>
             </div>
           </section>
 
@@ -385,7 +397,7 @@
             <div class="footer-links">
               <a href="#about">About</a>
               <a href="#learning-hub">Learning Hub</a>
-              <a href="#process">Process</a>
+              <a href="#services">Services</a>
               <a href="#contact">Contact</a>
             </div>
           </div>
