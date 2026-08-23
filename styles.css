@@ -1872,10 +1872,217 @@ body::before {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
+.hardware-course__hero {
+  grid-template-columns: 1.25fr 0.75fr;
+  padding-bottom: 56px;
+}
+
+.hardware-course__hero h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  line-height: 0.95;
+}
+
+.course-hero__lead {
+  margin: 24px 0 0;
+  color: #f4d370;
+  font-size: 1.25rem;
+  font-weight: 600;
+  max-width: 42ch;
+}
+
+.hardware-course__summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hardware-course__summary div {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  min-height: 92px;
+  padding: 16px;
+  border-left: 2px solid var(--accent);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.hardware-course__summary span,
+.hardware-outcomes span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hardware-course__summary strong {
+  font-size: 1rem;
+}
+
+.hardware-module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hardware-module {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 26px 24px 24px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.hardware-module__number {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.hardware-module h3,
+.hardware-detail-grid h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+
+.hardware-module p,
+.hardware-detail-grid p {
+  margin: 0;
+  color: #c7c2ba;
+  line-height: 1.65;
+}
+
+.hardware-module ul {
+  display: grid;
+  gap: 7px;
+  padding: 0 0 0 18px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.hardware-module li::marker {
+  color: var(--accent);
+}
+
+.hardware-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hardware-detail-grid article {
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  border-top: 2px solid var(--accent);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.hardware-detail-grid i {
+  color: #f4d370;
+  font-size: 1.4rem;
+}
+
+.hardware-outcomes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.hardware-outcomes div {
+  display: grid;
+  gap: 5px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.hardware-outcomes strong {
+  font-size: 1.25rem;
+}
+
+.hardware-outcomes small {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.hardware-enroll {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.hardware-enroll__intro .section-heading {
+  font-size: clamp(2.6rem, 4vw, 4.3rem);
+}
+
+.hardware-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hardware-list-panel {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.hardware-list-panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.hardware-list-panel h3 i {
+  color: #f4d370;
+  font-size: 1rem;
+}
+
+.hardware-list-panel ul {
+  display: grid;
+  gap: 9px;
+  padding: 0 0 0 18px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.hardware-list-panel li::marker {
+  color: var(--accent);
+}
+
 @media (max-width: 900px) {
   .course-hero,
-  .instructor-card {
+  .instructor-card,
+  .hardware-enroll {
     grid-template-columns: 1fr;
+  }
+
+  .hardware-module-grid,
+  .hardware-detail-grid,
+  .hardware-value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hardware-outcomes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .course-hero__media img {
@@ -1888,6 +2095,14 @@ body::before {
 }
 
 @media (max-width: 600px) {
+  .hardware-course__summary,
+  .hardware-module-grid,
+  .hardware-detail-grid,
+  .hardware-value-grid,
+  .hardware-outcomes {
+    grid-template-columns: 1fr;
+  }
+
   .course-actions,
   .course-meta {
     flex-direction: column;
