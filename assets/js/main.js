@@ -203,38 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-const cursor = document.querySelector('.custom-cursor');
-
-if (cursor) {
-  let mouseX = 0;
-  let mouseY = 0;
-  let posX = 0;
-  let posY = 0;
-
-  document.addEventListener('mousemove', (event) => {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-  });
-
-  const animateCursor = () => {
-    posX += (mouseX - posX) * 0.18;
-    posY += (mouseY - posY) * 0.18;
-    cursor.style.left = `${posX}px`;
-    cursor.style.top = `${posY}px`;
-    requestAnimationFrame(animateCursor);
-  };
-
-  animateCursor();
-
-  document.querySelectorAll('a, button').forEach((item) => {
-    item.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    item.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-  });
-
-  document.addEventListener('mousedown', () => cursor.classList.add('click'));
-  document.addEventListener('mouseup', () => cursor.classList.remove('click'));
-}
-
 if (typeof emailjs !== 'undefined') {
   emailjs.init('OYjRQdCtjB1hsrT-Z');
 

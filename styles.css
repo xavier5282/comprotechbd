@@ -2323,9 +2323,9 @@ body::before { display: none; }
 .service-card:last-child { border-right: 0; }
 .service-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(3,18,38,.94), rgba(3,18,38,.58)); transition: background .25s ease; }
 .service-card:hover::before, .service-card:focus-visible::before { background: linear-gradient(90deg, rgba(3,18,38,.88), rgba(3,18,38,.38)); }
-.service-card--training { background-image: url("img/course-1.jpg"); }
-.service-card--consultancy { background-image: url("img/about.jpeg"); }
-.service-card--support { background-image: url("img/team-1.jpg"); }
+.service-card--training { background-image: url("img/carousel-3.jpg"); }
+.service-card--consultancy { background-image: url("img/carousel-2.jpg"); }
+.service-card--support { background-image: url("img/carousel-1.jpg"); }
 .service-card__number, .service-card__content { position: relative; z-index: 1; }
 .service-card__number { display: block; color: #2a91ff; font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
 .service-card__content { max-width: 270px; margin-top: 14px; }
@@ -3031,50 +3031,6 @@ body::before { display: none; }
 
 .highlight span{
     color:#cfcfcf;
-}
-.custom-cursor{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 48px;
-    height: 48px;
-    pointer-events: none;
-    z-index: 9999999;
-
-    transform: translate(-50%, -50%);
-    transition: transform .2s ease;
-
-    filter:
-        drop-shadow(0 0 10px rgba(212,175,55,.55))
-        drop-shadow(0 0 22px rgba(212,175,55,.35))
-        drop-shadow(0 0 40px rgba(212,175,55,.2));
-}
-.custom-cursor::before{
-    content:"";
-    position:absolute;
-    inset:-10px;
-    border-radius:50%;
-    background:radial-gradient(
-        circle,
-        rgba(212,175,55,.25) 0%,
-        rgba(212,175,55,.08) 50%,
-        transparent 75%
-    );
-    z-index:-1;
-    animation:cursorGlow 2.5s ease-in-out infinite;
-}
-@keyframes cursorGlow{
-
-    0%,100%{
-        transform:scale(.9);
-        opacity:.6;
-    }
-
-    50%{
-        transform:scale(1.15);
-        opacity:1;
-    }
-
 }
 .contact-grid{
     display:grid;
