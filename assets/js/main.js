@@ -51,37 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const servicesDropdown = document.querySelector('.topbar__nav-dropdown');
-  const servicesToggle = servicesDropdown?.querySelector('.topbar__nav-dropdown-toggle');
-
-  if (servicesDropdown && servicesToggle) {
-    const setServicesState = (isOpen) => {
-      servicesDropdown.classList.toggle('is-open', isOpen);
-      servicesToggle.setAttribute('aria-expanded', String(isOpen));
-    };
-
-    servicesToggle.addEventListener('click', () => {
-      setServicesState(!servicesDropdown.classList.contains('is-open'));
-    });
-
-    document.addEventListener('click', (event) => {
-      if (event.target instanceof Node && !servicesDropdown.contains(event.target)) {
-        setServicesState(false);
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        setServicesState(false);
-        servicesToggle.focus();
-      }
-    });
-
-    servicesDropdown.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => setServicesState(false));
-    });
-  }
-
   const revealItems = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

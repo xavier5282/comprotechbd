@@ -1,431 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IBM Hardware & OS Course</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f5f7ff;
-color:#333;
-}
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
-}
-
-.logo{
-font-weight:600;
-font-size:22px;
-color:#CFA13F;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-nav ul li{
-cursor:pointer;
-}
-
-/* HERO */
-
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 8%;
-background:linear-gradient(120deg,#CFA13F,#f7a73f);
-color:white;
-}
-
-.hero-text{
-max-width:500px;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:15px;
-}
-
-.hero p{
-margin-bottom:25px;
-}
-
-.btn{
-background:white;
-color:#CFA13F;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-/* STATS */
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-padding:50px 8%;
-}
-
-.stat-card{
-background:white;
-padding:30px;
-text-align:center;
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.stat-card:hover{
-transform:translateY(-6px);
-}
-
-/* COURSE SECTION */
-
-.section-title{
-text-align:center;
-font-size:32px;
-margin-top:40px;
-}
-
-.courses{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-padding:50px 8%;
-}
-
-.course-card{
-background:white;
-border-radius:12px;
-padding:25px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.course-card:hover{
-transform:translateY(-8px);
-}
-
-.course-card h3{
-margin-bottom:10px;
-color:#CFA13F;
-}
-
-.tag{
-display:inline-block;
-background:#eef3ff;
-padding:5px 10px;
-border-radius:20px;
-font-size:12px;
-margin:5px 5px 0 0;
-}
-
-/* CTA */
-
-.cta{
-background:linear-gradient(120deg,#CFA13F,#CFA13F);
-color:white;
-text-align:center;
-padding:70px 20px;
-margin-top:40px;
-}
-
-.cta h2{
-font-size:32px;
-margin-bottom:15px;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:25px;
-background:#111;
-color:white;
-margin-top:40px;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-
-<nav>
-<a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <img src="img/comprotech-logo.png" alt="Comprotech BD Logo" style="height: 50px; width: auto;">
-</a>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="#course-topics">Courses</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="index.html#contact">Contact</a></li>
-</ul>
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-text">
-<h1>Introduction to Hardware & Operating Systems</h1>
-<p>Learn the fundamentals of computer hardware, operating systems, virtualization, and modern technologies.</p>
-<a href="#course-topics" class="btn">Start Learning</a>
-</div>
-
-<div>
-<img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" width="200">
-</div>
-
-</section>
-
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stat-card">
-<h2>English</h2>
-<p>Language</p>
-</div>
-
-<div class="stat-card">
-<h2>4.7 ⭐</h2>
-<p>Rating</p>
-</div>
-
-<div class="stat-card">
-<h2>7 Modules</h2>
-<p>Course Content</p>
-</div>
-
-<div class="stat-card">
-<h2>2 Weeks</h2>
-<p>Flexible Learning</p>
-</div>
-
-</section>
-
-<!-- COURSES -->
-
-<h2 class="section-title" id="course-topics">Course Topics</h2>
-
-<section class="courses">
-
-<div class="course-card">
-<h3>Hardware Fundamentals</h3>
-<p>Learn CPUs, motherboards, memory, storage devices and hardware architecture.</p>
-
-<span class="tag">CPU</span>
-<span class="tag">GPU</span>
-<span class="tag">Memory</span>
-
-</div>
-
-<div class="course-card">
-<h3>Operating Systems</h3>
-<p>Understand Windows, macOS, Linux and mobile operating systems.</p>
-
-<span class="tag">Linux</span>
-<span class="tag">Windows</span>
-<span class="tag">macOS</span>
-
-</div>
-
-</section>
-
-<!-- COURSE MODULES -->
-
-<section style="padding:60px 8%; background:#f5f7ff;">
-
-<h2 style="text-align:center; margin-bottom:40px;">Course Modules</h2>
-
-<div class="accordion">
-
-<div class="accordion-item">
-<button class="accordion-header">
-Technical Support Basics for Everyone
-<span>Module 1 • 2 hours</span>
-</button>
-<div class="accordion-content">
-<p>In the first module of the course, we'll learn about how computers were invented, how they've evolved over time, and how they work today. We will also learn about what an "IT Support Specialist" is and what they do in their job. By the end of this module, you will know how to count like a computer using binary and understand why these calculations are so powerful for society. So let's get started! </p>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-header">
-Hardware
-<span>Module 2 • 2 hours</span>
-</button>
-<div class="accordion-content">
-<p>In the second module of this course, we'll learn about what's inside a computer. We'll learn all about the hardware components or different pieces inside a computer. We'll discover what each component does and how they work together to make a computer function. By the end of this module, you will also know how to build a computer from scratch! </p>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-header">
-Operating System
-<span>Module 3 • 2 hours</span>
-</button>
-<div class="accordion-content">
-<p>In the third module of this course, learners will explore operating systems (OS). They will learn about the common operating systems that are used today and understand how they work with the computer hardware. Learners will review the "boot process" of an operating system and show learners how to install Windows, Linux, and Mac OSX operating systems. Finally, learners will use the hands-on lab environment to interact directly with the Windows and Linux operating systems.</p>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-header">
-Networking
-<span>Module 4 • 2 hours</span>
-</button>
-<div class="accordion-content">
-<p>In the fourth module of this course, we'll learn about computer networking. We'll explore the history of the Internet and what "The Web" actually is. We'll also discuss topics like Internet privacy, security, and what the future of the Internet may look like. You'll also understand why the Internet has limitations even today. By the end of this module, you will know how the Internet works and recognize both the positive and negative impacts the Internet has had on the world. </p>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-header">
-Windows Workstation Setup and Troubleshooting
-<span>Module 5 • 4 hours</span>
-</button>
-<div class="accordion-content">
-<p>Practice installing and troubleshooting Windows workstations.</p>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-header">
-Final Project and Quiz
-<span>Module 6 • 2 hours</span>
-</button>
-<div class="accordion-content">
-<p>Apply your knowledge through a final project and assessment.</p>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-header">
-Bonus Module – Desktop and Mobile Operating Systems
-<span>Module 7 • 2 hours</span>
-</button>
-<div class="accordion-content">
-<p>Explore additional operating systems used in modern devices.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<style>
-
-.accordion-item{
-background:white;
-margin-bottom:12px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
-overflow:hidden;
-}
-
-.accordion-header{
-width:100%;
-padding:18px 20px;
-border:none;
-background:white;
-text-align:left;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-display:flex;
-justify-content:space-between;
-}
-
-.accordion-header span{
-font-weight:400;
-color:#666;
-font-size:14px;
-}
-
-.accordion-content{
-max-height:0;
-overflow:hidden;
-transition:max-height 0.3s ease;
-padding:0 20px;
-}
-
-.accordion-content p{
-padding:15px 0;
-color:#555;
-}
-
-</style>
-
-<script>
-
-const headers=document.querySelectorAll(".accordion-header");
-
-headers.forEach(header=>{
-header.addEventListener("click",()=>{
-
-const content=header.nextElementSibling;
-
-if(content.style.maxHeight){
-content.style.maxHeight=null;
-}else{
-content.style.maxHeight=content.scrollHeight+"px";
-}
-
-});
-});
-
-</script>
-
-<!-- CTA -->
-
-<section class="cta">
-
-<h2>Start Your IT Career Today</h2>
-<p>Join thousands of learners and gain industry-ready skills.</p>
-
-<br>
-
-<a href="#" class="btn">Enroll Now</a>
-
-</section>
-
-<footer>
-
-<p>© 2026 Comprotech | IBM Skills Network Inspired Landing Page</p>
-
-</footer>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Hardware Training | ComproTechBD</title>
+    <meta name="description" content="Practical IT hardware and operating systems training for learners building real technical support skills." />
+    <meta name="theme-color" content="#07131d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page"><div class="page-inner">
+      <header class="topbar">
+        <a class="topbar__brand" href="index.html" aria-label="ComproTechBD home"><img src="img/comprotech-logo.png" alt="ComproTechBD logo" class="brand-logo" /></a>
+        <button class="topbar__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation"><span></span></button>
+        <nav class="topbar__nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="index.html#about">About</a><a href="index.html#learning-hub">Learning Hub</a><a href="index.html#services">Services</a>
+          <a href="index.html#contact" class="topbar__nav-link topbar__nav-link--featured">Contact <span class="topbar__nav-badge">NEW</span></a>
+        </nav>
+      </header>
+
+      <main id="main" class="service-page audit-page">
+        <section class="section service-hero audit-hero" id="training-hero">
+          <div class="service-hero__content">
+            <p class="section-title">ComproTech Learning Hub</p>
+            <h1>IT Hardware Training</h1>
+            <p class="section-copy">Learn how computers are built, configured, maintained, and supported through practical lessons that connect hardware fundamentals with real IT work.</p>
+            <div class="hero__actions"><a href="index.html#contact" class="button button--primary">Join the Course</a><a href="#training-topics" class="button button--secondary">View Curriculum</a></div>
+          </div>
+          <aside class="support-visual" aria-label="IT hardware training overview">
+            <div class="support-board">
+              <div class="support-board__header"><span>Training dashboard</span><span class="support-status"><i class="fa-solid fa-circle" aria-hidden="true"></i>Coming soon</span></div>
+              <div class="support-chips" aria-hidden="true"><span><i class="fa-solid fa-microchip"></i>Hardware</span><span><i class="fa-solid fa-screwdriver-wrench"></i>Hands-on labs</span></div>
+              <div class="support-network" aria-hidden="true"><div class="support-node support-node--cloud">CPU</div><div class="support-node support-node--server">Systems</div><div class="support-node support-node--router">Networks</div><div class="support-node support-node--user">Support</div><div class="support-line support-line--one"></div><div class="support-line support-line--two"></div><div class="support-line support-line--three"></div></div>
+              <div class="support-footer"><div class="support-ring"><span>7</span></div><div class="support-mini"><div><strong>14</strong><span>Hours</span></div><div><strong>4.7</strong><span>Rating</span></div></div></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section" id="training-topics" aria-labelledby="training-topics-heading">
+          <p class="section-title">What you will learn</p><h2 class="section-heading" id="training-topics-heading">A practical path from computer components to confident technical support.</h2>
+          <div class="audit-grid section-offset">
+            <article class="audit-card"><div class="audit-card__icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div><h3>Hardware Fundamentals</h3><p>Understand CPUs, motherboards, memory, storage, power supplies, and how components work together.</p></article>
+            <article class="audit-card"><div class="audit-card__icon"><i class="fa-solid fa-desktop" aria-hidden="true"></i></div><h3>Computer Assembly</h3><p>Learn how to identify parts, assemble a workstation, install components, and prepare a system for use.</p></article>
+            <article class="audit-card"><div class="audit-card__icon"><i class="fa-brands fa-windows" aria-hidden="true"></i></div><h3>Operating Systems</h3><p>Explore Windows and Linux installation, drivers, updates, boot processes, and basic system management.</p></article>
+            <article class="audit-card"><div class="audit-card__icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div><h3>Networking Basics</h3><p>Understand device connections, internet fundamentals, privacy, security, and common network limitations.</p></article>
+            <article class="audit-card"><div class="audit-card__icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div><h3>Troubleshooting</h3><p>Follow a repeatable diagnostic process for hardware, software, connectivity, and workstation issues.</p></article>
+            <article class="audit-card"><div class="audit-card__icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div><h3>Practical Labs</h3><p>Apply each concept through guided exercises and finish with a project that demonstrates your new skills.</p></article>
+          </div>
+        </section>
+
+        <section class="section audit-approach" aria-labelledby="training-process-heading">
+          <p class="section-title">Course structure</p><h2 class="section-heading" id="training-process-heading">Learn in a clear sequence that keeps theory close to real IT work.</h2>
+          <div class="approach-flow section-offset"><article class="approach-step"><span class="step-number">01</span><h3>Learn the Basics</h3><p>Understand how computers work and what an IT support specialist does in a real workplace.</p></article><article class="approach-step"><span class="step-number">02</span><h3>Build the Hardware</h3><p>Identify components and practice assembling a computer from the ground up.</p></article><article class="approach-step"><span class="step-number">03</span><h3>Install the Systems</h3><p>Set up Windows and Linux, manage drivers, and connect software decisions to hardware performance.</p></article><article class="approach-step"><span class="step-number">04</span><h3>Apply Your Skills</h3><p>Complete troubleshooting exercises and a final assessment based on practical support scenarios.</p></article></div>
+        </section>
+
+        <section class="section audit-benefits" aria-labelledby="training-benefits-heading">
+          <p class="section-title">Why this course</p><h2 class="section-heading" id="training-benefits-heading">Designed for learners who want useful skills, not just another certificate.</h2>
+          <div class="benefit-grid section-offset"><article class="benefit-box"><i class="fa-solid fa-handshake" aria-hidden="true"></i><h3>Hands-on learning</h3><p>Practice the concepts that technicians use while setting up and maintaining real systems.</p></article><article class="benefit-box"><i class="fa-solid fa-clock" aria-hidden="true"></i><h3>Flexible format</h3><p>Complete seven focused modules across approximately fourteen hours at a comfortable pace.</p></article><article class="benefit-box"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h3>Career foundation</h3><p>Build a strong base for entry-level hardware, workstation, and IT support roles.</p></article></div>
+        </section>
+
+        <section class="section audit-standards" aria-labelledby="training-modules-heading">
+          <p class="section-title">Course modules</p><h2 class="section-heading" id="training-modules-heading">Seven focused modules covering the essentials of modern workstations.</h2>
+          <div class="standards-grid section-offset"><div class="standard-item"><i class="fa-solid fa-check"></i> Technical support basics</div><div class="standard-item"><i class="fa-solid fa-check"></i> Hardware components</div><div class="standard-item"><i class="fa-solid fa-check"></i> Computer assembly</div><div class="standard-item"><i class="fa-solid fa-check"></i> Windows and Linux setup</div><div class="standard-item"><i class="fa-solid fa-check"></i> Networking fundamentals</div><div class="standard-item"><i class="fa-solid fa-check"></i> Troubleshooting workflows</div><div class="standard-item"><i class="fa-solid fa-check"></i> Final project and quiz</div><div class="standard-item"><i class="fa-solid fa-check"></i> Desktop and mobile systems</div></div>
+        </section>
+
+        <section class="section audit-cta"><div class="audit-cta__panel"><div><p class="section-title">Ready to start?</p><h2>Build the hardware skills your IT career needs.</h2></div><a href="index.html#contact" class="button button--primary">Talk to Our Team</a></div></section>
+      </main>
+
+      <footer class="footer"><div class="footer__top"><div>ComproTechBD © 2026</div><div class="footer-social" aria-label="Social media links"><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fa-brands fa-behance"></i></a><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div><div class="footer__bottom"><div class="footer__meta">Learning • Hardware • IT Support</div><div class="footer-links"><a href="index.html#about">About</a><a href="index.html#learning-hub">Learning Hub</a><a href="index.html#services">Services</a><a href="index.html#contact">Contact</a></div></div></footer>
+    </div></div>
+    <script src="script.js" defer></script><script src="assets/js/main.js" defer></script>
+  </body>
 </html>
