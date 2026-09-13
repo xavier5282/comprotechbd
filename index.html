@@ -163,7 +163,7 @@
 
   .hero-visual{
     position:relative;
-    background:var(--navy-900);
+    background:linear-gradient(180deg, rgba(12,24,48,.16), rgba(12,24,48,.42)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
     overflow:hidden;
     clip-path:polygon(9% 0, 100% 0, 100% 100%, 0 100%);
   }
@@ -622,6 +622,11 @@
   .contact-card p{
     margin:0; color:var(--ink-600); font-size:15px; line-height:1.7;
   }
+  .contact-visual{
+    width:100%; height:220px; border-radius:18px; overflow:hidden; margin:22px 0 20px;
+    background-size:cover; background-position:center; border:1px solid rgba(18,32,64,.16);
+    box-shadow:0 16px 28px -22px rgba(15,23,42,.35);
+  }
   .contact-meta{
     margin-top:26px; display:flex; flex-direction:column; gap:14px;
   }
@@ -784,43 +789,6 @@
     </div>
 
     <div class="hero-visual">
-      <div class="server-scene">
-        <svg viewBox="0 0 700 620" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="rackGlow" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#1a2c52"/>
-              <stop offset="1" stop-color="#0c1830"/>
-            </linearGradient>
-          </defs>
-          <rect width="700" height="620" fill="url(#rackGlow)"/>
-          <!-- server racks -->
-          <g opacity="0.9">
-            <rect x="40" y="60" width="90" height="520" rx="4" fill="#16233f" stroke="#233a63" stroke-width="1"/>
-            <rect x="150" y="40" width="90" height="540" rx="4" fill="#16233f" stroke="#233a63" stroke-width="1"/>
-            <rect x="480" y="30" width="90" height="550" rx="4" fill="#16233f" stroke="#233a63" stroke-width="1"/>
-            <rect x="590" y="50" width="90" height="530" rx="4" fill="#16233f" stroke="#233a63" stroke-width="1"/>
-          </g>
-          <!-- rack unit lines + lights -->
-          <g id="lights"></g>
-          <!-- silhouette of person with laptop -->
-          <g transform="translate(230,120)">
-            <path d="M120 40c0 22-16 40-38 40s-38-18-38-40 16-38 38-38 38 16 38 38Z" fill="#0e1a33"/>
-            <path d="M40 500V230c0-40 30-70 70-70h4c40 0 70 30 70 70v270" fill="#0e1a33"/>
-            <path d="M50 300 L180 260 L190 300 L200 420 L165 430 L150 340 L60 360Z" fill="#0e1a33"/>
-            <rect x="150" y="330" width="95" height="66" rx="4" fill="#0c1830" stroke="#3a5fa8" stroke-width="1.5"/>
-            <rect x="156" y="336" width="83" height="46" rx="2" fill="#1d3a6e"/>
-          </g>
-          <!-- floating amber particles -->
-          <g fill="#f2a93b" opacity="0.85">
-            <circle cx="120" cy="120" r="3"/>
-            <circle cx="600" cy="160" r="2.5"/>
-            <circle cx="520" cy="440" r="3"/>
-            <circle cx="90" cy="420" r="2"/>
-            <circle cx="640" cy="500" r="3"/>
-          </g>
-        </svg>
-      </div>
-
       <div class="hero-tagline">
         Your IT Partner<br>for a <span class="hl">Smarter</span><br>Tomorrow
         <span class="underline"></span>
@@ -991,6 +959,7 @@
     <div class="contact-card">
       <div class="contact-kicker"><span class="num">03</span> Contact</div>
       <h3>Send us a message.</h3>
+      <div class="contact-visual" style="background-image:linear-gradient(180deg, rgba(12,24,48,.14), rgba(12,24,48,.36)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80');"></div>
       <p>Tell us about your project, training needs, or support requirements. Our team will get back to you with the right next step.</p>
 
       <div class="contact-meta">
@@ -1103,48 +1072,6 @@
   drawer.addEventListener('click', (e) => { if (e.target === drawer) drawer.classList.remove('open'); });
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
 
-  // procedurally generate server rack unit lines + blinking lights
-  (function () {
-    const ns = 'http://www.w3.org/2000/svg';
-    const g = document.getElementById('lights');
-    const rackX = [40, 150, 480, 590];
-    const rackY = [60, 40, 30, 50];
-    rackX.forEach((x, i) => {
-      const top = rackY[i];
-      for (let u = 0; u < 16; u++) {
-        const y = top + 18 + u * 32;
-        const line = document.createElementNS(ns, 'rect');
-        line.setAttribute('x', x + 6);
-        line.setAttribute('y', y);
-        line.setAttribute('width', 78);
-        line.setAttribute('height', 22);
-        line.setAttribute('rx', 2);
-        line.setAttribute('fill', '#101d38');
-        line.setAttribute('stroke', '#233a63');
-        line.setAttribute('stroke-width', '0.6');
-        g.appendChild(line);
-
-        const light = document.createElementNS(ns, 'circle');
-        light.setAttribute('cx', x + 74);
-        light.setAttribute('cy', y + 11);
-        const colors = ['#2ee6a8', '#f2a93b', '#3a8bf0'];
-        const c = colors[Math.floor(Math.random() * colors.length)];
-        light.setAttribute('r', 2.2);
-        light.setAttribute('fill', c);
-        light.style.opacity = Math.random() > 0.3 ? '1' : '0.25';
-        if (Math.random() > 0.6) {
-          const dur = (1 + Math.random() * 2).toFixed(2);
-          const anim = document.createElementNS(ns, 'animate');
-          anim.setAttribute('attributeName', 'opacity');
-          anim.setAttribute('values', '1;0.2;1');
-          anim.setAttribute('dur', dur + 's');
-          anim.setAttribute('repeatCount', 'indefinite');
-          light.appendChild(anim);
-        }
-        g.appendChild(light);
-      }
-    });
-  })();
 </script>
 
 </body>
